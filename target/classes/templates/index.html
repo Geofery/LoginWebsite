@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html xmlns:th ="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="text-align: center">
+<h1><p>Welcome to pointless shop!</p></h1>
+    <hr>
+    <h1 th:text="${mail}">mail</h1>
+<table>
+    <tr>
+<a href="/login"> <input type="button" value="Login"></a>
+<a href="/register"><input type="button" value="Create account"></a>
+<a href="/session"><input type="button" value="Who am i?"></a>
+        <br>
+    </tr>
+</table>
+<p>
+    Is session empty?
+    <th:block th:text="${session.isEmpty()} ? 'Yes' : 'No'"></th:block>
+</p>
+</div>
+</body>
+</html>
